@@ -47,7 +47,7 @@ RUN echo "" && \
        --enablerepo=rhel-server-rhscl-7-rpms \
        --enablerepo=epel \
        install \
-       jq vim screen which hostname passwd tmux nano wget git \
+       jq vim screen which hostname passwd tmux nano wget git telnet ping \
        bash-completion openssl shellinabox util-linux expect \
        atomic-openshift-clients \
     && \
