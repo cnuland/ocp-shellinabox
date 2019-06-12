@@ -43,7 +43,6 @@ RUN echo "" && \
        --enablerepo=rhel-7-server-extras-rpms \
        --enablerepo=rhel-7-server-optional-rpms \
        --enablerepo=rhel-7-server-ose-3.11-rpms \
-       --enablerepo=rhel-7-server-devtools-rpms \
        --enablerepo=rhel-server-rhscl-7-rpms \
        --enablerepo=epel \
        install \
