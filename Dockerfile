@@ -46,7 +46,7 @@ RUN echo "" && \
        --enablerepo=rhel-server-rhscl-7-rpms \
        --enablerepo=epel \
        install \
-       jq vim screen which hostname passwd tmux nano wget git telnet traceroute iputils httpd-tools \
+       jq vim screen which hostname passwd tmux nano wget git telnet traceroute iputils httpd-tools mongodb-org-shell \
        bash-completion openssl shellinabox util-linux expect \
        atomic-openshift-clients \
     && \
@@ -68,7 +68,18 @@ RUN echo "" && \
     echo "*** Done building siab container ***" && \
     cat /opt/siab.logo.txt && \
     echo ""
+    
+# Set up mongodb yum repo entry
+# https://www.liquidweb.com/kb/how-to-install-mongodb-on-centos-6/
+RUN echo -e "\
+[mongodb]\n\
+name=MongoDB Repository\n\
+baseurl=https://repo.mongodb.org/yum/redhat/7Server/mongodb-org/3.0/x86_64/\n\
+gpgcheck=0\n\
+enabled=1\n" >> /etc/yum.repos.d/mongodb.repo
 
+# Install mongodb
+RUN yum update -y && yum install -y mongodb-org-shell
 
 # shellinabox will listen on 8080
 EXPOSE 8080
