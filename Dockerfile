@@ -79,7 +79,7 @@ gpgcheck=0\n\
 enabled=1\n" >> /etc/yum.repos.d/mongodb.repo
 
 # Install mongodb
-RUN yum update -y && yum install -y mongodb-org-shell
+RUN yum update -y && microdnf install -y mongodb-org-shell
 
 # shellinabox will listen on 8080
 EXPOSE 8080
