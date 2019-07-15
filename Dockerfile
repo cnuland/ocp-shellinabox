@@ -71,15 +71,15 @@ RUN echo "" && \
     
 # Set up mongodb yum repo entry
 # https://www.liquidweb.com/kb/how-to-install-mongodb-on-centos-6/
-RUN echo -e "\
-[mongodb]\n\
-name=MongoDB Repository\n\
-baseurl=https://repo.mongodb.org/yum/redhat/7Server/mongodb-org/3.0/x86_64/\n\
-gpgcheck=0\n\
-enabled=1\n" >> /etc/yum.repos.d/mongodb.repo
+# RUN echo -e "\
+# [mongodb]\n\
+# name=MongoDB Repository\n\
+# baseurl=https://repo.mongodb.org/yum/redhat/7Server/mongodb-org/3.0/x86_64/\n\
+# gpgcheck=0\n\
+# enabled=1\n" >> /etc/yum.repos.d/mongodb.repo
 
 # Install mongodb
-RUN microdnf install -y mongodb-org
+# RUN microdnf install -y mongodb-org
 
 # shellinabox will listen on 8080
 EXPOSE 8080
