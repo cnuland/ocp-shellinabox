@@ -47,7 +47,7 @@ RUN echo "" && \
        --enablerepo=epel \
        install \
        jq vim screen which hostname passwd tmux nano wget git telnet traceroute iputils httpd-tools \
-       bash-completion openssl shellinabox util-linux expect \
+       bash-completion openssl shellinabox util-linux expect nmap-ncat \
        atomic-openshift-clients \
     && \
     microdnf clean all && \
