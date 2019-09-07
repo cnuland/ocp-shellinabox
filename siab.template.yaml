@@ -6,16 +6,14 @@ items:
   metadata:
     labels:
       build: siab
-    name: rhel7-minimal
+    name: centos
   spec:
     lookupPolicy:
       local: false
     tags:
-    - annotations:
-        openshift.io/imported-from: registry.access.redhat.com/rhel7-minimal
       from:
         kind: DockerImage
-        name: registry.access.redhat.com/rhel7-minimal
+        name: centos:7
       importPolicy: {}
       name: latest
       referencePolicy:
@@ -39,13 +37,13 @@ items:
     source:
       git:
         ref: master
-        uri: https://github.com/lpsantil/ocp-shellinabox.git
+        uri: https://github.com/cnuland/ocp-shellinabox.git
       type: Git
     strategy:
       dockerStrategy:
         from:
           kind: ImageStreamTag
-          name: rhel7-minimal:latest
+          name: centos:latest
       type: Docker
     successfulBuildsHistoryLimit: 5
     triggers:
