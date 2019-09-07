@@ -9,6 +9,8 @@ USER 0
 
 # Add our init script
 ADD startsiab.sh /opt/startsiab.sh
+# Add logo
+ADD siab.logo.txt /opt/siab.logo.txt
 # Fix up the Reverse coloring
 ADD black-on-white.css /usr/share/shellinabox/black-on-white.css
 # Add nano syntax highlighting for Dockerfiles
