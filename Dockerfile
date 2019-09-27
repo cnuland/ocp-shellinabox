@@ -35,7 +35,7 @@ RUN echo "" && \
     echo "=== Installing EPEL ===" && \
     yum install -y http://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-11.noarch.rpm && \
     echo "\n=== Installing developer tools ===" && \
-    yum install -y jq vim screen which hostname passwd tmux nano wget git bash-completion openssl shellinabox wget git telnet traceroute iputils httpd-tools nmap-ncat util-linux expect --enablerepo=epel && \
+    yum install -y jq vim screen which hostname passwd tmux nano wget git bash-completion openssl shellinabox wget git telnet traceroute iputils httpd-tools nmap util-linux expect --enablerepo=epel && \
     yum clean all && \
     cd /tmp/ && \
     echo "\n=== Installing oc ===" && \
