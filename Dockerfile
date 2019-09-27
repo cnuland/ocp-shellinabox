@@ -39,7 +39,7 @@ RUN echo "" && \
     yum clean all && \
     cd /tmp/ && \
     echo "\n=== Installing oc ===" && \
-    wget https://github.com/openshift/origin/releases/download/v3.10.0/openshift-origin-client-tools-v3.10.0-dd10d17-linux-64bit.tar.gz && \
+    wget https://github.com/openshift/origin/releases/download/v3.10.0/openshift-origin-client-tools-v3.10.0-dd10d17-linux-64bit.tar.gz --no-check-certificate && \
     ls -lah /tmp/ && \
     echo "\n=== Untar'ing 'oc' ===" && \
     tar zxvf /tmp/openshift-origin-client-tools-v3.10.0-dd10d17-linux-64bit.tar.gz && \
