@@ -33,10 +33,10 @@ ADD nanorc /tmp/nanorc
 RUN echo "" && \
     cat /opt/siab.logo.txt && \
     echo "=== Installing EPEL ===" && \
-    yum install -y http://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-12.noarch.rpm && \
+    dnf install -y http://dl.fedoraproject.org/pub/epel/7/x86_64/Packages/e/epel-release-7-12.noarch.rpm && \
     echo "\n=== Installing developer tools ===" && \
-    yum install -y jq vim screen which hostname passwd tmux nano wget git bash-completion openssl shellinabox wget git telnet traceroute iputils httpd-tools nmap util-linux expect --enablerepo=epel && \
-    yum clean all && \
+    dnf clean all && rm -r /var/cache/dnf  && dmf upgrade -y && dnf update -y && \
+    dnf install -y jq vim screen which hostname passwd tmux nano wget git bash-completion openssl shellinabox wget git telnet traceroute iputils httpd-tools nmap util-linux expect --enablerepo=epel && \
     cd /tmp/ && \
     echo "\n=== Installing oc ===" && \
     wget https://github.com/openshift/origin/releases/download/v3.10.0/openshift-origin-client-tools-v3.10.0-dd10d17-linux-64bit.tar.gz --no-check-certificate && \
