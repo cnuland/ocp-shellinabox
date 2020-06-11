@@ -32,6 +32,8 @@ ADD nanorc /tmp/nanorc
 # Be sure to remove login's lock file
 RUN echo "" && \
     cat /opt/siab.logo.txt && \
+    echo "=== Enable Namespaces ===" && \
+    echo 10000 > /proc/sys/user/max_user_namespaces && \
     echo "=== Installing EPEL ===" && \
     yum install epel-release -y && \
     echo "\n=== Installing developer tools ===" && \
