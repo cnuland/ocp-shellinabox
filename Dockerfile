@@ -33,7 +33,7 @@ ADD nanorc /tmp/nanorc
 RUN echo "" && \
     cat /opt/siab.logo.txt && \
     echo "=== Enable Namespaces ===" && \
-    echo 10000 > /proc/sys/user/max_user_namespaces && \
+    sudo echo 10000 > /proc/sys/user/max_user_namespaces && \
     echo "=== Installing EPEL ===" && \
     yum install epel-release -y && \
     echo "\n=== Installing developer tools ===" && \
