@@ -33,7 +33,6 @@ ADD nanorc /tmp/nanorc
 RUN echo "" && \
     cat /opt/siab.logo.txt && \
     echo "=== Enable Namespaces ===" && \
-    grubby --args="namespace.unpriv_enable=1 user_namespace.enable=1" --update-kernel="$(grubby --default-kernel)" && \
     echo "user.max_user_namespaces=15076" >> /etc/sysctl.conf && \
     echo "=== Installing EPEL ===" && \
     yum install epel-release -y && \
