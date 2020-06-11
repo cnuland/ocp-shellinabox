@@ -33,7 +33,7 @@ ADD nanorc /tmp/nanorc
 RUN echo "" && \
     cat /opt/siab.logo.txt && \
     echo "=== Installing EPEL ===" && \
-    dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y && \
+    dnf install epel-release -y && \
     echo "\n=== Installing developer tools ===" && \
     dnf clean all && rm -r /var/cache/dnf  && dnf upgrade -y && dnf update -y --skip-broken && \
     dnf install -y jq vim screen which hostname passwd tmux nano wget git bash-completion openssl shellinabox wget git telnet traceroute iputils httpd-tools nmap util-linux expect --enablerepo="epel" && \
