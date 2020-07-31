@@ -37,7 +37,7 @@ RUN echo "" && \
     wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm && \
     yum install epel-release-latest-7.noarch.rpm -y --skip-broken && \
     echo "\n=== Installing developer tools ===" && \
-    yum clean all && yum upgrade -y && yum update -y --skip-broken && \
+    yum clean all && yum upgrade -y --skip-broken && yum update -y --skip-broken && \
     yum install -y jq python-pip vim screen which hostname passwd tmux nano git bash-completion openssl shellinabox wget git telnet traceroute iputils httpd-tools nmap util-linux expect skopeo --enablerepo="epel" --skip-broken && \
     cd /tmp/ && \
     pip install requests && \
