@@ -38,7 +38,7 @@ RUN echo "" && \
     yum clean all && yum upgrade -y && yum update -y --skip-broken && \
     yum install -y jq python-pip vim screen which hostname passwd tmux nano wget git bash-completion openssl shellinabox wget git telnet traceroute iputils httpd-tools nmap util-linux expect skopeo --enablerepo="epel" && \
     cd /tmp/ && \
-    pip install requests && \
+    pip install requests --trusted-host pypi.org --trusted-host files.pythonhosted.org --trusted-host pypi.python.org && \
     echo "\n=== Installing oc ===" && \
     wget https://github.com/openshift/origin/releases/download/v3.10.0/openshift-origin-client-tools-v3.10.0-dd10d17-linux-64bit.tar.gz --no-check-certificate && \
     ls -lah /tmp/ && \
