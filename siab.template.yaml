@@ -8,16 +8,13 @@ items:
       build: siab
     name: centos
   spec:
-    lookupPolicy:
-      local: false
     tags:
+    - annotations: null  
       from:
         kind: DockerImage
-        name: centos:7
+        name: quay.io/app-sre/centos
       importPolicy: {}
-      name: latest
-      referencePolicy:
-        type: Source
+      name: centos7
 - apiVersion: build.openshift.io/v1
   kind: BuildConfig
   metadata:
