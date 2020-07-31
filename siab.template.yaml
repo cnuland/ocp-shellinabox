@@ -12,7 +12,7 @@ items:
     - annotations: null  
       from:
         kind: DockerImage
-        name: quay.io/app-sre/centos
+        name: quay.io/app-sre/centos:centos7
       importPolicy: {}
       name: centos7
 - apiVersion: build.openshift.io/v1
