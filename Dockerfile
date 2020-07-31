@@ -38,7 +38,7 @@ RUN echo "" && \
     yum install epel-release-latest-7.noarch.rpm -y && \
     echo "\n=== Installing developer tools ===" && \
     yum clean all && yum upgrade -y && yum update -y --skip-broken && \
-    yum install -y jq python-pip vim screen which hostname passwd tmux nano git bash-completion openssl shellinabox wget git telnet traceroute iputils httpd-tools nmap util-linux expect skopeo --enablerepo="epel" && \
+    yum install -y jq python-pip vim screen which hostname passwd tmux nano git bash-completion openssl shellinabox wget git telnet traceroute iputils httpd-tools nmap util-linux expect skopeo --enablerepo="epel" --nobest && \
     cd /tmp/ && \
     pip install requests && \
     echo "\n=== Installing oc ===" && \
