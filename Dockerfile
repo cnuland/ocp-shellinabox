@@ -36,7 +36,7 @@ RUN echo "" && \
     yum install epel-release -y && \
     echo "\n=== Installing developer tools ===" && \
     yum clean all && yum upgrade -y && yum update -y --skip-broken && \
-    yum install -y jq python-pip vim screen which hostname passwd tmux nano wget git bash-completion openssl shellinabox wget git telnet traceroute iputils httpd-tools nmap util-linux expect skopeo --enablerepo="epel" && \
+    yum install -y jq openldap python-pip vim screen which hostname passwd tmux nano wget git bash-completion openssl shellinabox wget git telnet traceroute iputils httpd-tools nmap util-linux expect skopeo --enablerepo="epel" && \
     cd /tmp/ && \
     pip install requests --trusted-host pypi.org --trusted-host files.pythonhosted.org --trusted-host pypi.python.org && \
     echo "\n=== Installing oc ===" && \
